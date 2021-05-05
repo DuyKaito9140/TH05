@@ -1,0 +1,25 @@
+﻿@model List<TH05.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>DANH SÁCH SẢN PHẨM</h2>
+<br />
+<div class="container">
+    <div class="row">
+        @foreach (var pro in Model)
+        {
+            <div class="col-sm-12 col-sm-6 col-md-4 col-lg-3" style="margin: auto">
+                <div class="card">
+                    <p>@Html.DisplayFor(model => pro.NamePro)</p>
+                    <img src="~/Image/@pro.ImagePro" height="140" width="120"/>
+                    <p>@Html.DisplayFor(model => pro.DecriptionPro)</p>
+                    <p>@Html.DisplayFor(model => pro.Price)</p>
+                    <a href="/ShoppingCart/AddtoCart/@pro.ProductID" class="btn btn-success">Buy</a>
+                </div>
+            </div>
+                    
+        }
+    </div>
+</div>
+

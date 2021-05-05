@@ -1,0 +1,52 @@
+﻿@model TH05.Models.Cart
+
+@{
+    ViewBag.Title = "ShowCart";
+}
+
+<h2>GIỎ HÀNG</h2>
+<a href="@Url.Action("Index","Product")">Tiếp tục mua hàng</a>
+<br />
+<br />
+@if(Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>hình sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+            <th></th>
+        </tr>
+        <tbody>
+            @foreach(var item in Model.Items)
+            {
+                decimal total = item.getquatity * (decimal)item.getproduct.Price.Value;
+                <tr>
+                    <td>@item.getproduct.NamePro</td>
+                    <td><img src="~/Image/@item.getproduct.ImagePro" height="50" width="50" /></td>
+                    <td>@item.getproduct.Price</td>
+                    <td>
+                        @using (Html.BeginForm("Update_Cart_Quantity", "ShoppingCart"))
+                        {
+                            <input type="hidden" value="@item.getproduct.ProductID" name="idpro" />
+                            <input type="number" value="@item.getquatity" name="cartQuantity" />
+                            <input type="submit" value="Update" />
+                        }
+                    </td>
+                    <td>@total</td>
+                    <td>
+                        <a href="/ShoppingCart/Removecart/@item.getproduct.ProductID" class="btn btn-danger">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" style="text-align: right">Tổng tiền: @Model.sum_money()</td>
+            </tr>
+        </tfoot>
+    </table>
+}
+
