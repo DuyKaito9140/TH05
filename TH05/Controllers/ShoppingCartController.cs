@@ -73,5 +73,37 @@ namespace TH05.Controllers
             ViewBag.QuatityCart = total_qua_item;
             return PartialView("BagCarts");
         }
+        public ActionResult Checkout(FormCollection form)
+        {
+            try
+            {
+                Cart cart = Session["Cart"] as Cart;
+                OrderPro order = new OrderPro();
+                order.DateOrder = DateTime.Now;
+                order.AddressDeliverry = form["AddressDelivery"];
+                order.IDCus = int.Parse(form["CodeCustomer"]);
+                db.OrderProes.Add(order);
+                foreach(var item in cart.Items)
+                {
+                    OrderDetail orderdetail = new OrderDetail();
+                    orderdetail.IDOrder = order.ID;
+                    orderdetail.IDProduct = item.getproduct.ProductID;
+                    orderdetail.UnitPrice = (double)item.getproduct.Price;
+                    orderdetail.Quantity = item.getquatity;
+                    db.OrderDetails.Add(orderdetail);
+                }
+                db.SaveChanges();
+                cart.clearcart();
+                return RedirectToAction("Checkout_sucess");
+            }
+            catch
+            {
+                return Content("Error Checkout, Please check information...");
+            }
+        }
+        public ActionResult Checkout_sucess()
+        {
+            return View();
+        }
     }
 }

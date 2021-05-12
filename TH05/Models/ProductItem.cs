@@ -12,5 +12,6 @@ namespace TH05.Models
         {
             return db.Products.ToList();
         }
+        
     }
 }

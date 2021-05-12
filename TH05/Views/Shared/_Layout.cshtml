@@ -34,10 +34,11 @@
                     }
                     else
                     {
-                        <li>@Html.ActionLink("Product", "Index", "Product")</li>
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Product", "Index", "Product")</li>
+                        <li>@Html.ActionLink("Category", "Index", "Category")</li>
 
-                        <li class="user rounded5" style="cursor: pointer; margin-top: 16px; margin-left: 600px">
+                        <li class="user rounded5" style="cursor: pointer; margin-top: 16px; margin-left: 500px">
                             <span style="color: red">@TH05.Models.Content.useraccount</span>
                         </li>
                         <li>@Html.ActionLink("Logout", "Logout", "Home")</li>

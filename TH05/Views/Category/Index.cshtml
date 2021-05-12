@@ -1,0 +1,33 @@
+﻿@model List<TH05.Models.Category>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container mt-5">
+    <div style="margin-top: 20px">
+        @Html.ActionLink("Create a category", "Create", "Category", new { @class = "btn btn-success" })
+    </div>
+    <table class="table">
+        <tr>
+            <th>ID cate</th>
+            <th>Name cate</th>
+            <th></th>
+        </tr>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr>
+                    <td>@category.IDCate</td>
+                    <td>@category.NameCate</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = category.IDCate }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Detail", "Detail", new { id = category.IDCate }, new { @class = "btn btn-warning" })
+                        @Html.ActionLink("Delete", "Delete", new { id = category.IDCate }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
