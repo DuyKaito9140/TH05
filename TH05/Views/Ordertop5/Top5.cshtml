@@ -1,0 +1,34 @@
+﻿@model List<TH05.Models.ViewM>
+
+<style>
+    table{
+        text-align: center;
+    }
+    th {
+        text-align: center;
+    }
+    td{
+        text-align: center;
+    }
+</style>
+<h2>TOP 5 SẢN PHẨM BÁN CHẠY NHẤT</h2>
+<table>
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Hình sản phẩm</th>
+        <th>Giá</th>
+        <th>Tổng số lượng</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.IDPro</td>
+            <td>@item.NamePro</td>
+            <td><img src="~/Image/@item.ImgPro" height="140" width="120" /></td>
+            <td>@item.PricePro</td>
+            <td>@item.Sum_Quantity</td>
+            <td><a href="/ShoppingCart/AddtoCart/@item.IDPro" class="btn btn-success">Buy</a></td>
+        </tr>
+    }
+</table>

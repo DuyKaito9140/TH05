@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Ordertop5Controller.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -168,6 +169,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\OrderDetailModel.cs" />
     <Compile Include="Models\OrderPro.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
@@ -176,6 +178,7 @@
     </Compile>
     <Compile Include="Models\ProductItem.cs" />
     <Compile Include="Models\RegisterModel.cs" />
+    <Compile Include="Models\ViewM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,8 +204,12 @@
     <Content Include="Image\apech.jpg" />
     <Content Include="Image\bg.jpg" />
     <Content Include="Image\dell7591.png" />
+    <Content Include="Image\dongho.jpg" />
     <Content Include="Image\icons8-buy-96.png" />
     <Content Include="Image\iphonexs.png" />
+    <Content Include="Image\sac.jpg" />
+    <Content Include="Image\tainghe.jpg" />
+    <Content Include="Image\xiaomi.jpg" />
     <Content Include="Models\DBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DBModel.edmx</DependentUpon>
@@ -354,9 +361,12 @@
     <Content Include="Views\ShoppingCart\Checkout_sucess.cshtml" />
     <Content Include="Views\Customer\Create.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Product\Search.cshtml" />
+    <Content Include="Views\Ordertop5\Top5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

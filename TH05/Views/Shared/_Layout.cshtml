@@ -28,6 +28,8 @@
                     {
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("Product", "Index", "Product")</li>
+                        <li>@Html.ActionLink("Searh Price", "Search", "Product")</li>
+                        <li>@Html.ActionLink("Top 5", "Top5", "Ordertop5")</li>
                         <li>@Html.ActionLink("Login", "Login", "Home")</li>
                         <li>@Html.ActionLink("Register", "Register", "Home")</li>
 
@@ -37,8 +39,10 @@
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("Product", "Index", "Product")</li>
                         <li>@Html.ActionLink("Category", "Index", "Category")</li>
-
-                        <li class="user rounded5" style="cursor: pointer; margin-top: 16px; margin-left: 500px">
+                        <li>@Html.ActionLink("Top 5", "Top5", "Ordertop5")</li>
+                        <li>@Html.ActionLink("Searh Price", "Search", "Product")</li>
+                        <li>@Html.ActionLink("Register", "Register", "Home")</li>
+                        <li class="user rounded5" style="cursor: pointer; margin-top: 16px; margin-left: 300px">
                             <span style="color: red">@TH05.Models.Content.useraccount</span>
                         </li>
                         <li>@Html.ActionLink("Logout", "Logout", "Home")</li>

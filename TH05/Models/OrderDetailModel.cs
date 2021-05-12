@@ -5,12 +5,12 @@ using System.Web;
 
 namespace TH05.Models
 {
-    public class ProductItem
+    public class OrderDetailModel
     {
         DBSportStoresEntities db = new DBSportStoresEntities();
-        public IEnumerable<Product> laydsproduct()
+        public IEnumerable<OrderDetail> laydsproduct()
         {
-            return db.Products.ToList();
-        }        
+            return db.OrderDetails.ToList();
+        }
     }
 }
