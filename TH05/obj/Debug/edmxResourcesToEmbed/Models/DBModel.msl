@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DBSportStoresModelStoreContainer" CdmEntityContainer="DBSportStoresEntities">
+  <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="DBSportStoresEntities">
     <EntitySetMapping Name="AdminUsers">
-      <EntityTypeMapping TypeName="DBSportStoresModel.AdminUser">
+      <EntityTypeMapping TypeName="DBModel.AdminUser">
         <MappingFragment StoreEntitySet="AdminUser">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NameUser" ColumnName="NameUser" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Categories">
-      <EntityTypeMapping TypeName="DBSportStoresModel.Category">
+      <EntityTypeMapping TypeName="DBModel.Category">
         <MappingFragment StoreEntitySet="Category">
           <ScalarProperty Name="IDCate" ColumnName="IDCate" />
           <ScalarProperty Name="NameCate" ColumnName="NameCate" />
@@ -20,7 +20,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Customers">
-      <EntityTypeMapping TypeName="DBSportStoresModel.Customer">
+      <EntityTypeMapping TypeName="DBModel.Customer">
         <MappingFragment StoreEntitySet="Customer">
           <ScalarProperty Name="IDCus" ColumnName="IDCus" />
           <ScalarProperty Name="NameCus" ColumnName="NameCus" />
@@ -30,7 +30,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrderDetails">
-      <EntityTypeMapping TypeName="DBSportStoresModel.OrderDetail">
+      <EntityTypeMapping TypeName="DBModel.OrderDetail">
         <MappingFragment StoreEntitySet="OrderDetail">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="IDProduct" ColumnName="IDProduct" />
@@ -41,7 +41,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrderProes">
-      <EntityTypeMapping TypeName="DBSportStoresModel.OrderPro">
+      <EntityTypeMapping TypeName="DBModel.OrderPro">
         <MappingFragment StoreEntitySet="OrderPro">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="DateOrder" ColumnName="DateOrder" />
@@ -51,7 +51,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="DBSportStoresModel.Product">
+      <EntityTypeMapping TypeName="DBModel.Product">
         <MappingFragment StoreEntitySet="Products">
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="NamePro" ColumnName="NamePro" />
@@ -59,6 +59,7 @@
           <ScalarProperty Name="Category" ColumnName="Category" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="ImagePro" ColumnName="ImagePro" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

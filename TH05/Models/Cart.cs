@@ -52,7 +52,12 @@ namespace TH05.Models
         {
             var item = items.Find(s => s.getproduct.ProductID == id);
             if(item != null)
-                item.getquatity = new_quatity;
+            {
+                if (items.Find(s => s.getproduct.Quantity > new_quatity) != null)
+                    item.getquatity = new_quatity;
+                else
+                    item.getquatity = 1;
+            }
         }
         public void remove_cart(int id)
         {

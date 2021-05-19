@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="DBSportStoresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="AdminUser">
     <Key>
       <PropertyRef Name="ID" />
@@ -54,6 +54,7 @@
     <Property Name="Category" Type="int" />
     <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
     <Property Name="ImagePro" Type="nvarchar(max)" />
+    <Property Name="Quantity" Type="int" />
   </EntityType>
   <Association Name="FK__OrderDeta__IDOrd__4316F928">
     <End Role="OrderPro" Type="Self.OrderPro" Multiplicity="0..1" />
@@ -103,7 +104,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="DBSportStoresModelStoreContainer">
+  <EntityContainer Name="DBModelStoreContainer">
     <EntitySet Name="AdminUser" EntityType="Self.AdminUser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />

@@ -91,6 +91,12 @@ namespace TH05.Controllers
                     orderdetail.UnitPrice = (double)item.getproduct.Price;
                     orderdetail.Quantity = item.getquatity;
                     db.OrderDetails.Add(orderdetail);
+
+                    foreach(var pro in db.Products.Where(s=>s.ProductID == orderdetail.IDProduct))
+                    {
+                        var up_qua_pro = pro.Quantity - item.getquatity;
+                        pro.Quantity = up_qua_pro;
+                    }
                 }
                 db.SaveChanges();
                 cart.clearcart();

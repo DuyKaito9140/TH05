@@ -203,10 +203,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="Image\apech.jpg" />
     <Content Include="Image\bg.jpg" />
+    <Content Include="Image\chuotgaming.jpg" />
     <Content Include="Image\dell7591.png" />
     <Content Include="Image\dongho.jpg" />
     <Content Include="Image\icons8-buy-96.png" />
     <Content Include="Image\iphonexs.png" />
+    <Content Include="Image\macbook2021.jpg" />
     <Content Include="Image\sac.jpg" />
     <Content Include="Image\tainghe.jpg" />
     <Content Include="Image\xiaomi.jpg" />
@@ -222,13 +224,6 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\DBModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DBModel.edmx.diagram">
-      <DependentUpon>DBModel.edmx</DependentUpon>
-    </Content>
     <Content Include="fonts\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
@@ -284,6 +279,13 @@
     <Content Include="fonts\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
     <Content Include="fonts\fonts\poppins\Poppins-Thin.ttf" />
     <Content Include="fonts\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <EntityDeploy Include="Models\DBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DBModel.edmx.diagram">
+      <DependentUpon>DBModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
