@@ -1,8 +1,25 @@
-﻿@model List<TH05.Models.Product>
+﻿@model PagedList.IPagedList<TH05.Models.Product>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Index";
 }
+<style>
+    .myclassed {
+        width: 35px;
+        height: 35px;
+        border: 1px solid #d6d4d4;
+        background-color: white;
+        margin-left: 5px;
+        padding-top: 3px;
+        text-align: center;
+        vertical-align: central;
+    }
 
+    .myclassed:hover {
+        background-color: #241b6a;
+        cursor: pointer;
+    }
+</style>
 <h2>DANH SÁCH SẢN PHẨM</h2>
 <br />
 <div class="container">
@@ -12,14 +29,28 @@
             <div class="col-sm-12 col-sm-6 col-md-4 col-lg-3" style="margin: auto">
                 <div class="card" style=" text-align: center; padding-bottom: 15px; padding-top: 15px; border: 1px solid #f3efef; margin-top: 15px">
                     <p>@Html.DisplayFor(model => pro.NamePro)</p>
-                    <img src="~/Image/@pro.ImagePro" height="140" width="120"/>
+                    <img src="~/Image/@pro.ImagePro" height="140" width="120" />
                     <p>@Html.DisplayFor(model => pro.DecriptionPro)</p>
                     <p>@Html.DisplayFor(model => pro.Price)</p>
                     <a href="/ShoppingCart/AddtoCart/@pro.ProductID" class="btn btn-success" style="width: 100px">Buy</a>
                 </div>
             </div>
-                    
         }
     </div>
+    <nav aria-label="Page navigation example" class="pagination-section mt-0">
+        <span class="fontbold">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount</span>
+        <ul class="pagination">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+           new PagedListRenderOptions
+           {
+               ClassToApplyToFirstListItemInPager = null,
+               ClassToApplyToLastListItemInPager = null,
+               DisplayLinkToIndividualPages = true,
+               DisplayPageCountAndCurrentLocation = false,
+               MaximumPageNumbersToDisplay = 10,
+               LiElementClasses = new string[] { "myclassed" },
+           })
+        </ul>
+    </nav>
 </div>
 

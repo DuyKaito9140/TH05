@@ -58,3 +58,7 @@ E:\TH_WebNC\TH05\TH05\obj\Debug\TH05.csproj.CopyComplete
 E:\TH_WebNC\TH05\TH05\obj\Debug\TH05.dll
 E:\TH_WebNC\TH05\TH05\obj\Debug\TH05.pdb
 E:\TH_WebNC\TH05\TH05\obj\Debug\TH05.csprojAssemblyReference.cache
+E:\TH_WebNC\TH05\TH05\bin\PagedList.dll
+E:\TH_WebNC\TH05\TH05\bin\PagedList.Mvc.dll
+E:\TH_WebNC\TH05\TH05\bin\PagedList.xml
+E:\TH_WebNC\TH05\TH05\bin\PagedList.Mvc.xml
